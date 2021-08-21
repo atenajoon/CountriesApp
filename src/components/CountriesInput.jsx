@@ -11,10 +11,16 @@ const CountriesInput = ({ onChange, value }) => {
     { id: 4, countryId: 2, name: "Toronto" },
   ];
 
+  const findCountry = () => {
+    countries.map((country) => {
+      if (value === country.name) {
+        console.log(value, " matched with ", country.name);
+      }
+    });
+  };
   return (
     <div>
-      {console.log(countries)}
-      {console.log(cities)}
+      <h1>Country is: {findCountry()}</h1>
       <label htmlFor="country">Choose Country: </label>
       <input id="country" onChange={onChange} value={value} />
       <h3>{value}</h3>
