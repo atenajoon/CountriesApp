@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import CountriesInput from "./CountriesInput";
 
 const CountriesApp = () => {
   const [value, setValue] = useState("");
@@ -10,9 +11,7 @@ const CountriesApp = () => {
 
   return (
     <div>
-      <label htmlFor="country">Choose Country: </label>
-      <input id="country" onChange={handleChange} value={value} />
-      <h3>{value}</h3>
+      <CountriesInput onChange={handleChange} value={value} />
     </div>
   );
 };
