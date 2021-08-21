@@ -1,5 +1,10 @@
 const CountriesApp = () => {
-  return <div>hi from countries</div>;
+  return (
+    <div>
+      <label htmlFor="country">Choose Country: </label>
+      <input id="country" />
+    </div>
+  );
 };
 
 export default CountriesApp;
