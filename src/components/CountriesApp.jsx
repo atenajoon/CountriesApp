@@ -5,13 +5,14 @@ const CountriesApp = () => {
 
   const handleChange = (e) => {
     const { value } = e.target;
-    console.log("changing", value);
+    setValue(value);
   };
 
   return (
     <div>
       <label htmlFor="country">Choose Country: </label>
       <input id="country" onChange={handleChange} value={value} />
+      <h3>{value}</h3>
     </div>
   );
 };
